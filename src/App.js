@@ -6,16 +6,17 @@ import {IncomeExpenses} from './components/IncomeExpenses'
 import {TransationList} from './components/TransationList'
 import {AddTransation} from './components/AddTransation'
 
+import {GlobalProvider} from './context/GlobalState';
 
 function App() {
   return (
-    <div className="container">
+    <GlobalProvider>
       <Header />
       <Balance />
       <IncomeExpenses />
       <TransationList />
       <AddTransation />
-    </div>
+    </GlobalProvider>
   );
 }
 
